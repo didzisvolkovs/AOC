@@ -1,0 +1,10 @@
+import  re
+file1 = open(r"C:\Users\didzis\Desktop\input.txt", "r+") 
+Lines = file1.readlines()
+totalsum = 0
+for line in Lines:
+	linesum = 0
+    	linearray = list(map(int, re.findall('\d', line)))
+	linesum = int(str(linearray[0]) + str(linearray[-1]))
+	totalsum = totalsum + linesum
+	print(totalsum)
